@@ -1,0 +1,9 @@
+﻿Source: Monkeytype (monkeytypegame/monkeytype)
+Repository: https://github.com/monkeytypegame/monkeytype
+Original files:
+- https://raw.githubusercontent.com/monkeytypegame/monkeytype/master/frontend/static/sound/click1/click1_1.wav
+- https://raw.githubusercontent.com/monkeytypegame/monkeytype/master/frontend/static/sound/click1/click1_2.wav
+- https://raw.githubusercontent.com/monkeytypegame/monkeytype/master/frontend/static/sound/click1/click1_3.wav
+
+License: GPL-3.0 (see repository LICENSE)
+Retrieved: 2026-04-21
