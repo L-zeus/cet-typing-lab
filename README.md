@@ -1,65 +1,53 @@
 # CET Typing Lab
 
-CET Typing Lab is a Vite + React typing trainer for CET4/CET6 sentence drills and full-passage practice. It focuses on WPM, accuracy, weak keys, slow words, passage reading, local progress, and shareable result cards.
+CET Typing Lab 是一个面向大学英语四级 / 六级备考场景的英文打字练习项目，把句子训练、篇章训练和进度反馈结合在一个轻量的网页应用里。  
+CET Typing Lab is a lightweight web app for CET-4 and CET-6 typing practice, combining sentence drills, passage training, and progress feedback in one place.
 
-## Local Development
+## 在线访问 | Live Demo
+
+- GitHub Pages 地址：[https://L-zeus.github.io/cet-typing-lab/](https://L-zeus.github.io/cet-typing-lab/)
+- Live site on GitHub Pages: [https://L-zeus.github.io/cet-typing-lab/](https://L-zeus.github.io/cet-typing-lab/)
+
+## 功能特点 | Features
+
+- 支持 CET4 / CET6 句子练习与长篇文章练习。
+- Supports both CET-4 / CET-6 sentence drills and long-passage practice.
+
+- 实时统计 WPM、准确率和完成情况，帮助观察打字稳定性。
+- Tracks WPM, accuracy, and completion in real time so users can measure typing stability.
+
+- 记录错键、慢词和历史成绩，方便针对薄弱点复盘。
+- Highlights weak keys, slow words, and session history for targeted review.
+
+- 提供 Data Bank / Progress / Challenge 等视图，便于持续练习。
+- Includes Data Bank, Progress, and Challenge views to support ongoing practice.
+
+- 支持本地账号与浏览器本地存储，不依赖后端登录即可体验。
+- Works with local accounts and browser storage, with no backend login required for core usage.
+
+- 内置机械键盘风格打字音效，可按需开启或关闭。
+- Includes optional mechanical keyboard style typing sounds.
+
+## 技术栈 | Tech Stack
+
+- React 18
+- Vite 5
+- Tailwind CSS
+
+## 本地运行 | Local Development
 
 ```bash
 npm install
 npm run dev
 ```
 
-## Build
+## 构建 | Build
 
 ```bash
 npm run build
 ```
 
-The production build is configured for GitHub Pages at `/cet-typing-lab/`. If the GitHub repository name changes, update `base` in `vite.config.js` to match the new repository path.
+## 数据与隐私 | Data and Privacy
 
-## GitHub Pages
-
-For GitHub Free, keep source code in a private repository and publish only built files to a separate public repository.
-
-Recommended repository split:
-
-- Private source repo: `L-zeus/cet-typing-lab-source`
-- Public Pages repo: `L-zeus/cet-typing-lab`
-
-Setup:
-
-```bash
-git remote set-url origin git@github.com:L-zeus/cet-typing-lab-source.git
-git remote add pages git@github.com:L-zeus/cet-typing-lab.git
-```
-
-Configure the repositories once:
-
-1. In `L-zeus/cet-typing-lab`, add a writable Deploy Key.
-2. In `L-zeus/cet-typing-lab-source`, add the matching private key as the Actions secret `PAGES_DEPLOY_KEY`.
-3. Keep the `pages` remote pointed at `git@github.com:L-zeus/cet-typing-lab.git`.
-
-After that, every push to `origin/main` will:
-
-1. run `npm ci`
-2. run `npm run build`
-3. run `npm run deploy:pages`
-4. push the built site to the public Pages repository automatically
-
-The deploy script builds the app, adds `404.html` and `.nojekyll`, syncs the source repository root `README.md` into the public Pages repository root, and then pushes the published site files. It refuses to run if `pages` points to the same repository as `origin`, which prevents accidentally publishing source history. It also fails fast if the source repository root `README.md` is missing.
-
-In the public Pages repository, open `Settings > Pages` and set `Source` to `Deploy from a branch`, branch `main`, folder `/root`.
-
-Visit `https://L-zeus.github.io/cet-typing-lab/` after Pages finishes deploying.
-
-If the GitHub Action is unavailable or fails and you need an immediate fallback release, run:
-
-```bash
-npm run deploy:pages
-```
-
-## Notes
-
-- Practice data and accounts are stored locally in the browser.
-- No required environment variables are needed for local-auth mode.
-- Sound assets live under `public/sounds/` and are served with the GitHub Pages base path.
+当前版本主要将练习进度、设置和本地账号信息保存在浏览器本地存储中，默认不依赖外部后端服务。  
+The current version stores practice progress, settings, and local account data mainly in browser local storage and does not depend on an external backend by default.
