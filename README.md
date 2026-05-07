@@ -8,6 +8,11 @@ CET Typing Lab is a lightweight web app for CET-4 and CET-6 typing practice, com
 - GitHub Pages 地址：[https://L-zeus.github.io/cet-typing-lab/](https://L-zeus.github.io/cet-typing-lab/)
 - Live site on GitHub Pages: [https://L-zeus.github.io/cet-typing-lab/](https://L-zeus.github.io/cet-typing-lab/)
 
+## 最新更新 | Latest Update
+
+- English release notes: [`CHANGELOG.md`](./CHANGELOG.md)
+- 中文更新日志：[`CHANGELOG.zh-CN.md`](./CHANGELOG.zh-CN.md)
+
 ## 功能特点 | Features
 
 - 支持 CET4 / CET6 句子练习与长篇文章练习。
@@ -22,8 +27,8 @@ CET Typing Lab is a lightweight web app for CET-4 and CET-6 typing practice, com
 - 提供 Data Bank / Progress / Challenge 等视图，便于持续练习。
 - Includes Data Bank, Progress, and Challenge views to support ongoing practice.
 
-- 支持本地账号与浏览器本地存储，不依赖后端登录即可体验。
-- Works with local accounts and browser storage, with no backend login required for core usage.
+- 核心练习仍可依赖浏览器本地存储运行；登录、排行榜和挑战成绩同步现已接入 Supabase。
+- Core practice still works with browser storage, while sign-in, leaderboard ranking, and challenge sync now run through Supabase.
 
 - 内置机械键盘风格打字音效，可按需开启或关闭。
 - Includes optional mechanical keyboard style typing sounds.
@@ -41,6 +46,16 @@ npm install
 npm run dev
 ```
 
+## 云端配置 | Cloud Configuration
+
+如果你需要启用云端登录与挑战排行榜，请在本地 `.env` 中配置以下变量：
+If you want cloud sign-in and the challenge leaderboard, configure these variables in your local `.env` file:
+
+```bash
+VITE_SUPABASE_URL=
+VITE_SUPABASE_PUBLISHABLE_KEY=
+```
+
 ## 构建 | Build
 
 ```bash
@@ -49,5 +64,5 @@ npm run build
 
 ## 数据与隐私 | Data and Privacy
 
-当前版本主要将练习进度、设置和本地账号信息保存在浏览器本地存储中，默认不依赖外部后端服务。  
-The current version stores practice progress, settings, and local account data mainly in browser local storage and does not depend on an external backend by default.
+当前版本仍会把练习进度、设置和大部分训练反馈保存在浏览器本地存储中；但云端登录、排行榜、个人最佳成绩和管理员能力依赖外部 Supabase 服务。  
+The current version still stores practice progress, settings, and most training feedback in browser local storage, but cloud sign-in, leaderboard data, personal best runs, and admin actions depend on Supabase.
